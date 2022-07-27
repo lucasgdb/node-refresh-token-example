@@ -1,9 +1,8 @@
 import { compare } from "bcryptjs";
-import { sign } from "jsonwebtoken";
 
-import { client } from "../../prisma/client";
-import { GenerateRefreshTokenProvider } from "../../provider/GenerateRefreshTokenProvider";
-import { GenerateTokenProvider } from "../../provider/GenerateTokenProvider";
+import { client } from "~/prisma/client";
+import { GenerateRefreshTokenProvider } from "~/provider/GenerateRefreshTokenProvider";
+import { GenerateTokenProvider } from "~/provider/GenerateTokenProvider";
 
 interface IRequest {
   username: string;

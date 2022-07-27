@@ -1,4 +1,5 @@
 import { Router } from "express";
+
 import { ensureAuthenticated } from "./middlewares/ensureAuthenticated";
 import { AuthenticateUserController } from "./useCases/authenticateUser/AuthenticateUserController";
 import { CreateUserController } from "./useCases/createUser/CreateUserController";
@@ -8,7 +9,7 @@ const router = Router();
 
 const createUserController = new CreateUserController();
 const authenticateUserController = new AuthenticateUserController();
-const refreshTokenUserController = new RefreshTokenUserController()
+const refreshTokenUserController = new RefreshTokenUserController();
 
 router.post("/user", createUserController.handle);
 router.post("/login", authenticateUserController.handle);
