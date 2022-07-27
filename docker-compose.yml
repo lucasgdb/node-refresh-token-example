@@ -1,0 +1,17 @@
+version: '3.9'
+
+services:
+  database:
+    image: postgres:latest
+    container_name: database
+    environment:
+      - POSTGRES_USER=example_user
+      - POSTGRES_DB=example_database
+      - POSTGRES_PASSWORD=example_password
+    ports:
+      - 5432:5432
+    volumes:
+      - example_database_data:/var/lib/postgresql/data
+
+volumes:
+  example_database_data:
